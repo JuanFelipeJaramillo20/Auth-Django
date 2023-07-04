@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SIGNUP PAGE</title>
+</head>
+<body>
+    <h2>Bienvenido a la pagina de registro</h2>
+
+    <form action="/signing" method="post">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Username..." required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Password..." required>
+        <br>
+        <button type="submit">Sign in</button>
+    </form>
+</body>
+</html>

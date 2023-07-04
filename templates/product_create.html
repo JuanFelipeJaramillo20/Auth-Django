@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Product</title>
+</head>
+<body>
+    <h2>Create Product</h2>
+    <form action="{% url 'product_create' %}" method="post">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" name="name"><br>
+        <label for="description">Description:</label>
+        <textarea name="description"></textarea><br>
+        <label for="price">Price:</label>
+        <input type="text" name="price"><br>
+        <input type="submit" value="Create">
+    </form>
+    <a href="{% url 'product_list' %}">Back to Product List</a>
+</body>
+</html>
